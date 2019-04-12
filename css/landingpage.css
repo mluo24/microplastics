@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Tajawal:400,700');
+
+body {
+	font-family: 'Tajawal', sans-serif;
+	color: white;
+}
+
+.cover-container {
+	max-width: 42em;
+}
+
+.cover {
+	padding: 0 1.5rem;
+}
+
+.bubble {
+	position: absolute;
+	width: 6em;
+    height: 6em;
+    background-color: #a3d2ff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 6em;
+    font-size: 2em;
+}
+
+#bubble1 {
+	left: 30%;
+	bottom: 15%;
+}
+
+#bubble2 {
+	right: 30%;
+	bottom: 18%;
+}
+
+#up {
+	position: absolute;
+	top: 2%;
+	left: 48%;
+}
+
+#first-section {
+	background-color: #D1E9EE;
+    /* For WebKit (Safari, Chrome, etc) */
+    background: #D1E9EE -webkit-gradient(linear, left top, left bottom, from(#D1E9EE), to(#A3D5E0)) no-repeat;
+    /* Mozilla,Firefox/Gecko */
+    background: #D1E9EE  -moz-linear-gradient(top, #D1E9EE, #A3D5E0) no-repeat;
+    /* IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#D1E9EE, endColorstr=#A3D5E0) no-repeat;
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#D1E9EE, endColorstr=#A3D5E0)" no-repeat;
+}
+
+#bottle {
+	position: absolute;
+	bottom: 10%;
+	left: 18%;
+	width: 7em;
+}
+
+#jug {
+	position: absolute;
+	bottom: 10%;
+	right: 18%;
+	width: 7em;
+}
+
+#ocean {
+	background-color: #52AACD;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 17.5%;
+}
+
+#waves-left {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	max-width: 30%;
+}
+
+#waves-right {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	max-width: 30%;
+}
+
+#rightfish {
+	position: absolute;
+	right: 5%;
+	top: 20%;
+	max-width: 15%;
+}
+
+#leftfish {
+	position: absolute;
+	left: 5%;
+	bottom: 25%;
+	max-width: 20%;
+}
+
+#second-section {
+	background-color: #12448E;
+    /* For WebKit (Safari, Chrome, etc) */
+    background: #12448E -webkit-gradient(linear, left top, left bottom, from(#52AACD), to(#12448E)) no-repeat;
+    /* Mozilla,Firefox/Gecko */
+    background: #12448E  -moz-linear-gradient(top, #52AACD, #005F98) no-repeat;
+    /* IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#52AACD, endColorstr=#12448E) no-repeat;
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#52AACD, endColorstr=#12448E)" no-repeat;
+}
+
+#last-section {
+	background-color: #12448E;
+}
+
+#last-section .inner {
+	margin-top: -15em;
+}

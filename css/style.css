@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Tajawal:400,700');
 
 body {
+    
 	font-family: 'Tajawal', sans-serif;
 	/* Background Gradient for Monochromatic Colors */
 
@@ -20,12 +21,16 @@ main > .container {
 	margin-top: 5.5em;
 }
 
-main p {
-	font-size: 1.2em;
-}
-
 main h1 {
 	text-align: center;
+}
+
+#logo {
+    width: 2em;
+}
+
+#ref {
+    word-wrap: break-word;
 }
 
 @media (min-width: 992px){

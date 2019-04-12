@@ -10,8 +10,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
-    <link rel="stylesheet" type="text/css" href="css/landing.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" type="text/css" href="css/landingpage.css">
+    <link rel="stylesheet" type="text/css" href="css/fullpage.css">
+
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'>
 
     <title>Chemistry of Microplastics</title>
 
@@ -19,50 +21,78 @@
 
 <body>
 
-<div class="w-100">
+<div id="fullpage">
 
-    <div class="cover-container d-flex w-100 vh-100 p-3 mx-auto flex-column">
-
-      <header class="masthead mb-auto">
-        <p class="text-muted text-center"><a href="#" class="text-white">(skip)</a></p>
-      </header>
-
+  <div class="section" id="first-section">
+    <div id="up">
+      <p class="text-muted text-center"><a href="#3" class="text-white">(skip)</a></p>
+    </div>
+    <div class="cover-container mx-auto">
       <main role="main" class="inner cover">
         <h1 class="cover-heading animated fadeIn delay-1s">Microplastics (from Google):</h1>
         <p class="lead animated fadeIn delay-2s">(n.) extremely small pieces of plastic debris in the environment resulting from the disposal and breakdown of consumer products and industrial waste.</p>
       </main>
-
-      <footer class="mastfoot mt-auto">
-      </footer>
-
+      <img src="img/bottle.svg" class="animated fadeInUpBig delay-3s" id="bottle">
+      <img src="img/milkjug.svg" class="animated fadeInUpBig delay-3s" id="jug">
+      <div id="ocean" class="animated fadeInUpBig delay-2s"></div>
+      <img src="img/waves.svg" class="animated fadeInUpBig delay-2s" id="waves-left">
+      <img src="img/rightwaves.svg" class="animated fadeInUpBig delay-2s" id="waves-right">
     </div>
+  </div>
 
-    <div class="cover-container d-flex w-100 vh-100 p-3 mx-auto flex-column">
-
-      <!-- <header class="masthead mb-auto">
-        <p class="text-muted text-center"><a href="#" class="text-white">(skip)</a></p>
-      </header>
-
-      <main role="main" class="inner cover animatedParent">
-        <h1 class="cover-heading" data-aos="fade-up">Microplastics (from Google):</h1>
-         <p class="lead animated fadeIn delay-2s">(n.) extremely small pieces of plastic debris in the environment resulting from the disposal and breakdown of consumer products and industrial waste.</p>
+  <div class="section" id="second-section">
+    <div class="cover-container mx-auto">
+    <main role="main" class="inner cover">
+        <h1 class="cover-heading">Microplastics are a problem.</h1>
+        <p class="lead">They are pollutants that are invading the environment and posing a danger to the wildlife, especially within our marine ecosystems.</p>
       </main>
-
-      <footer class="mastfoot mt-auto">
-      </footer> -->
-
+      <img src="img/fish.svg" id="rightfish">
+      <img src="img/trout-sillouette.svg" id="leftfish">
     </div>
+  </div>
+
+  <div class="section" id="last-section">
+    <div class="cover-container mx-auto">
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading text-center">We don’t know much about them now, but research is suggesting harmful trends associated with microplastics.</h1>
+        <p class="lead text-center">Learn more:</p>
+      </main>
+      <div class="bubble" id="bubble1"><a href="history.html" class="text-white">History</a></div>
+      <div class="bubble" id="bubble2"><a href="chemistry.html" class="text-white">Chemistry</a></div>
+    </div>
+  </div>
 
 </div>
-
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
+<script src="js/fullpage.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#fullpage').fullpage({
+      //options here
+      autoScrolling:true,
+      anchors: ['1', '2', '3'],
+      onLeave: function(origin, destination, direction){
+        if (destination.anchor == '2'){
+          $("#second-section").find('h1').addClass("animated fadeInUpBig");
+          $("#second-section").find('p').addClass("animated fadeInUpBig");
+          $("#rightfish").addClass("animated slideInRight delay-1s");
+          $("#leftfish").addClass("animated slideInLeft delay-2s");
+        }
+        else if (destination.anchor == '3'){
+          $("#last-section").find('h1').addClass("animated fadeInUpBig");
+          $("#last-section").find('p').addClass("animated fadeInUpBig");
+          $(".bubble").addClass("animated fadeInUpBig delay-1s");
+        }
+      }
+    });
+
+    //methods
+    $.fn.fullpage.setAllowScrolling(true);
+  });
 </script>
 
 </body>
